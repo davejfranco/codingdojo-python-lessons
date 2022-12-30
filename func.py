@@ -21,6 +21,10 @@ def print_age():
 
 print_age()
 
+def suma_int(a, b):
+    return a + b
+
+
 
 
 
