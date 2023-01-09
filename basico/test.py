@@ -1,7 +1,7 @@
-import unittest
+import unittest #Framework de pruebas unitarias
 from func import imprima_nombre, greater, suma_int, resta_int
 
-
+#Clase de pruebas para las funciones importadas
 class TestFunc(unittest.TestCase):
 
     def test_imprima_nombre(self):
@@ -22,7 +22,7 @@ class TestFunc(unittest.TestCase):
         self.assertEqual(greater(5, 3), 5, "Deberia ser 5")
         self.assertEqual(greater(3, 5), 5, "Deberia ser 5")
         self.assertEqual(greater(3, 3), 3, "Deberia ser 3")
-        
 
+#Ejecutar pruebas
 if __name__ == "__main__":
     unittest.main()
