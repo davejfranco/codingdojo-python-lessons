@@ -4,7 +4,7 @@ nombre = "dave"
 def hola():
     print("Hola mundo!")
 
-class Persona:
+class Personas:
 
     def __init__(self, nombre, edad):
         self.nombre = nombre
@@ -19,11 +19,14 @@ class Persona:
     def ir_al_bano(self):
         pass    
 
+    def saludar(self):
+        pass
+
 class Auto:  
     #metodo init, lo utilizo siempre que quiero darle atributos a mi clase
     def __init__(self, modelo, marca, color):
         #Atributos de la clase
-        self.module = modelo
+        self.modelo = modelo
         self.marca = marca
         self.color = color
 
@@ -46,7 +49,10 @@ class Concencionario:
         self.inventario = []
     
     def add_auto(self, auto: Auto):
-        self.inventario.append(auto)
+        try:
+            self.inventario.append(auto)
+        except Exception as err:
+            print(err)
     
     def get_inventario(self):
         return self.inventario
@@ -67,6 +73,7 @@ class Database:
         return self.client
     
     def save(self, data):
+        pass
         
 
 
@@ -76,6 +83,7 @@ class Database:
 car1 = Auto("Sedan", "Toyota", "Negro")
 car2 = Auto("Camioneta", "Ford", "Roja")
 car3 = Auto("Coupe", "Porsche", "Amarillo")
+
 
 tienda = Concencionario("CodingAuto", "Zoom", "958653568")
 tienda.add_auto(car1)
